@@ -9,41 +9,99 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Comic+Neue:wght@300;400;700&family=Courgette&family=Fredoka+One&family=Indie+Flower&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
-        root {
+        :root {
             --white: #FFFFFF;
             --black: #000000;
             --very-light-pink: #ffc1e3;
             --text-input-field: #F7F7F7;
             --primary-pink: #f48fb1;
+            --myExperiment: #ce93d8;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
         }
         body {
             font-family: 'Comic Neue', cursive;
         }
         .login {
-
+            width: 100%;
+            height: 100vh;
+            /* background: var(--myExperiment); */
+            display: grid;
+            place-items: center;
+            
         }
-        .container {
-
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+            border: var(--myExperiment) solid;
+            border-radius: 15px;
+            padding: 12px;
         }
+        .title {
+            font-size: var(--lg);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .subtitle{
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        input {
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 32px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .primary-button {
+            background-color: var(--primary-pink);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        
     </style>
 </head>
 <body>
     <div class="login">
         <div class="form-container">
-            <h1>Create a new password</h1>
-            <p> Enter a password for your account</p>
+            <h1 class="title">Create a new password</h1>
+            <p class="subtitle"> Enter a password for your account</p>
             <form action="/" class="form">
                 <label for="password" class="label">Password</label>
                 <input type="password" id="password" placeholder="**********" class="input input-password">
                 <label for="new-password" class="label">Re-enter password</label>
                 <input type="password" id="new-password" placeholder="*********" class="input input-password">
 
-                <input type="submit" value="confirm" class="primary-button login button">
+                <input type="submit" value="confirm" class="primary-button login-button">
             </form>
         </div>
-        
-
-
     </div>
 </body>
 </html>
