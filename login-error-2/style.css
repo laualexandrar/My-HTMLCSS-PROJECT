@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #E882C2;
+    --text-input-field: #F7F7F7;
+    --primary-pink: #D95BAA;
+    --myExperiment: #C44CB5;
+    --error-input-field: #ffebee;
+    --error-border: #B52D26;
+    --error-border-light: #F57973;
+    --invalidate-button:#dededed2;
+    --dark-green: #297A0B;
+    --light-green: #81D163;
+    --very-light-green: #e8f5e9;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+body {
+    margin: 0;
+    font-family: 'Comic Neue', cursive;
+}
+.login{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.form-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+    border: 2px var(--myExperiment) solid;
+    border-radius: 15px;
+    padding: 15px;
+}
+.form-container:hover {
+    border: 2px var(--primary-pink) solid;
+}
+.form {
+    color: var(--primary-pink);
+    font-size:var(--sm);
+    display: flex;
+    flex-direction: column
+}
+.label{
+    color: var(--error-border);
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.label-password {
+    color: var(--primary-pink);
+}
+.input {
+    background-color: var(--error-input-field);
+    border: var(--error-border) solid 1px;
+    border-radius: 8px;
+    height: 32px;
+    font-size: var(--md);
+    outline: none;
+    padding: 6px;
+    margin-bottom: 12px; 
+}
+
+.input-email {
+    margin-bottom: 22px;
+    color: var(--error-border);
+}
+
+.input-password {
+    background-color: var(--text-input-field);
+    border: none;
+    padding-top: 10px;
+}
+
+.input-email:hover {
+    box-shadow: 0 1px 6px 0 #20212447;
+    outline: none;
+}
+
+.input-password:hover{
+    box-shadow: 0 1px 6px 0 #20212447;
+    outline: none;
+}
+
+.primary-button{
+    background-color: var(--invalidate-button);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    height: 50px;
+}
+.primary-button:hover{
+    background-color: var(--error-input-field);
+    color: var(--error-border);
+    border: 1px solid var(--error-border);
+    text-decoration: line-through; 
+}
+.secondary-button{ 
+    border-radius: 8px;
+    background-color: var(--primary-pink);
+    border: none;
+    color: var(--white);
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    height: 50px;
+}
+.secondary-button:hover {
+    background-color: var(--very-light-pink);
+    border: 2px solid var(--primary-pink);
+}
+.login-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
+}
+a {
+    color: var(--primary-pink);
+    text-decoration: none;
+    font-size: var(--sm);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+a:hover {
+    font-weight: bold;
+}
