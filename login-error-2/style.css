@@ -71,11 +71,13 @@ body {
 .input-email {
     margin-bottom: 22px;
     color: var(--error-border);
+    box-shadow: 0 1px 6px 0 #20212447;
 }
 
 .input-password {
     background-color: var(--text-input-field);
     border: none;
+    box-shadow: 0 1px 6px 0 #20212447;
     padding-top: 10px;
 }
 
@@ -100,12 +102,7 @@ body {
     font-size: var(--md);
     height: 50px;
 }
-.primary-button:hover{
-    background-color: var(--error-input-field);
-    color: var(--error-border);
-    border: 1px solid var(--error-border);
-    text-decoration: line-through; 
-}
+
 .secondary-button{ 
     border-radius: 8px;
     background-color: var(--primary-pink);

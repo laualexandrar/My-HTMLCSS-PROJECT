@@ -67,6 +67,7 @@ body {
 }
 input {
     background-color: var(--text-input-field);
+    color: var(--primary-pink);
     border: none;
     border-radius: 8px;
     height: 32px;

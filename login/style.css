@@ -57,6 +57,7 @@ body {
     background-color: var(--text-input-field);
     border-radius: 8px;
     border: none;
+    box-shadow: 0 1px 6px 0 #20212447;
     height: 32px;
     font-size: var(--md);
     padding: 6px;
@@ -100,6 +101,7 @@ body {
     border-radius: 8px;
     border: var(--primary-pink) solid 2px;
     color: var(--primary-pink);
+    background-color: var(--white);
     width: 100%;
     cursor: pointer;
     font-size: var(--md);
