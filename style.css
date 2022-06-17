@@ -6,9 +6,9 @@
 :root {
     --white: #FFFFFF;
     --black: #000000;
-    --very-light-pink: #E882C2;
+    --very-light-pink: #EAB1B0;
     --text-input-field: #F7F7F7;
-    --primary-pink: #D95BAA;
+    --primary-pink: #E4686C;
     --myExperiment: #C44CB5;
     --error-input-field: #ffebee;
     --error-border: #B52D26;
@@ -22,7 +22,6 @@
     --lg: 18px;
 }
 body {
-    margin: 0;
     font-family: 'Comic Neue', cursive;
 }
 .login{
@@ -35,26 +34,54 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     width: 300px;
-    border: 3px var(--myExperiment) solid;
     border-radius: 15px;
-    padding: 15px;
+    justify-items: center;
+    padding: 16px;
+}
+.logo {
+    width: 180px;
+    padding: 30px;
+    /* display: none; */
 }
 .form {
     color: var(--primary-pink);
-    font-size:var(--sm);
+    font-size:var(--md);
     display: flex;
-    flex-direction: column
-}
-.form-container:hover {
-    border: 2px var(--primary-pink) solid;
+    flex-direction: column;
+    width: 250px;
 }
 .label{
-    font-size: var(--sm);
-    color: var(--error-border);
+    font-size: var(--md);
     font-weight: bold;
     margin-bottom: 4px;
 }
+.error-label{
+    font-size: var(--md);
+    color: var(--error-border);
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: none;
+}
+.valid-label{
+    color: var(--error-border);
+    font-size: var(--md);
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: none;
+}
 .input {
+    background-color: var(--text-input-field);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 1px 6px 0 #20212447;
+    height: 32px;
+    font-size: var(--md);
+    padding: 6px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+.error-input {
     background-color: var(--error-input-field);
     border: var(--error-border) solid 1px;
     border-radius: 8px;
@@ -64,26 +91,27 @@ body {
     padding: 6px;
     margin-bottom: 12px; 
     outline: none;
+    display: none;
 }
 
 .input-email {
-    margin-bottom: 22px;;
-}
-.input-password {
-    padding-top: 10px;
+    margin-bottom: 22px;
 }
 .input-email:hover {
+    border: 1px solid var(--primary-pink);
+    color: var(--myExperiment);
     box-shadow: 0 1px 6px 0 #20212447;
     outline: none;
 }
 
 .input-password:hover{
+    border: 1px solid var(--primary-pink);
+    color: var(--myExperiment);
     box-shadow: 0 1px 6px 0 #20212447;
     outline: none;
 }
-
 .primary-button{
-    background-color: var(--invalidate-button);
+    background-color: var(--primary-pink);
     border-radius: 8px;
     border: none;
     color: var(--white);
@@ -93,12 +121,16 @@ body {
     font-weight: bold;
     height: 50px;
 }
-
+.primary-button:hover{
+    background-color: var(--very-light-pink);
+    border: 2px solid var(--primary-pink);
+  
+}
 .secondary-button{ 
     border-radius: 8px;
-    background-color: var(--primary-pink);
-    border: none;
-    color: var(--white);
+    border: var(--primary-pink) solid 2px;
+    color: var(--primary-pink);
+    background-color: var(--white);
     width: 100%;
     cursor: pointer;
     font-size: var(--md);
@@ -121,13 +153,14 @@ a {
     display: flex;
     justify-content: center;
     text-align: center;
+    text-decoration: none;
     margin-bottom: 60px;
 }
 a:hover {
     color: var(--primary-pink);
     font-weight: bold;
 }
-p{
+.error-paragraph{
     color: var(--error-border);
     text-decoration: none;
     font-size: var(--sm);
@@ -135,4 +168,5 @@ p{
     justify-content: center;
     text-align: center;
     margin-bottom: 60px;
+    display: none;
 }
