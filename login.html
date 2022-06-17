@@ -15,8 +15,22 @@
         <div class="form-container">
             <img src="./assets/img/Foodies & Goodies-logos_transparent.png" alt="Company Logo" class="logo">
             <form action="/" class="form">
-                <h1 class="password-recovery-title inactive">Password Recovery</h1>
-                <p class="password-recovery-subtitle inactive">Ingress the email address used to create your account</p>
+                <h1 class="title inactive">Password Recovery</h1>
+                <p class="subtitle inactive">Ingress the email address used to create your account</p>
+                <div class= "description-container inactive">
+                    <h1 class="title">Email has been sent!</h1>
+                    <p class="subtitle">Please check your inbox for instructions on how to reset the password</p>
+        
+                    <figure class="email-image">
+                        <img src="./assets/icons/email.svg" alt="email">
+                    </figure>
+                    <p class="error-paragraph inactive">Invalid user ID and password combination</p>
+                <input type="submit" value="Log in" class="primary-button login-button">
+                <p class="resend">
+                    <span>Didn't received the email?</span>
+                    <a href="/">Resend</a>
+                </p>
+                </div>
                 <label for="email" class="label">Email address</label>
                     <input type="text" id="email" placeholder="youremail@example.com" class="input input-email">
                 
